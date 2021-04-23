@@ -1,9 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello World</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	<script type = "text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style type="text/css">
+		body {
+			padding: 0px;
+			margin: 0px;
+		}
+		canvas {
+			display: block;
+			margin: 0px;
+			position: absolute;
+		}
+	</style>
 </head>
-<body>
-	<h2>Hello from local!</h2>
+
+<body class="container">
+	<div class="row" style="width:560px">
+		<div class="col s12 m12 l12">
+			<h5>Demo Game</h5>
+			<nav>
+				<div class="nav-wrapper">
+					<ul id="nav-mobile" class="left hide-on-med-and-down">
+						<li><a href="#" onclick="show('blockit');">Game 1</a></li>
+						<li><a href="#" onclick="show('circular')">Game 2</a></li>
+						<li><a href="#" onclick="show('fling')">Game 3</a></li>
+						<li><a href="#" onclick="show('avoider')">Game 4</a></li>
+						<li><a href="#" onclick="show('runner')">Game 5</a></li>
+						<li><a href="#" onclick="show('stickhero')">Game 6</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="col s12 m12 l12">
+			<div class="card blue-grey lighten-4">
+				<div class="card-content">
+					<iframe src="blockit" frameborder="1" id="myframe" width="100%" height="400"></iframe>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		const show = (id) => {
+			let iframe1 = document.getElementById('myframe')
+			iframe1.style.display = 'block'
+			iframe1.src = id
+		}
+	</script>
 </body>
 </html>
